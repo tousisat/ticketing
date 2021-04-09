@@ -8,7 +8,8 @@
     "start": "ts-node-dev src/index.ts",
     "docker:build": "docker build -t tousisat/payments .",
     "docker:push": "docker push tousisat/payments",
-    "test": "jest --watchAll --no-cache"
+    "test": "jest --watchAll --no-cache",
+    "test:ci": "jest"
   },
   "jest": {
     "preset": "ts-jest",
