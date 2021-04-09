@@ -1,0 +1,36 @@
+{
+  "name": "expiration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "typescript:init": "tsc --init",
+    "start": "ts-node-dev src/index.ts",
+    "docker:build": "docker build -t tousisat/expiration .",
+    "docker:push": "docker push tousisat/expiration",
+    "test": "jest --watchAll --no-cache"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "./src/test/setup.ts"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@progtech/common": "^1.0.8",
+    "@types/bull": "^3.15.0",
+    "bull": "^3.22.0",
+    "node-nats-streaming": "^0.3.2",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.21",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.4"
+  }
+}
