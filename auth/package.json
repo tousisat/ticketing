@@ -8,7 +8,8 @@
     "start": "ts-node-dev src/index.ts",
     "docker:build": "docker build -t tousisat/auth .",
     "docker:push": "docker push tousisat/client",
-    "test": "jest --watchAll --no-cache"
+    "test": "jest --watchAll --no-cache",
+    "test:ci": "jest"
   },
   "jest": {
     "preset": "ts-jest",
@@ -44,5 +45,3 @@
     "ts-jest": "^26.5.4"
   }
 }
-
-
